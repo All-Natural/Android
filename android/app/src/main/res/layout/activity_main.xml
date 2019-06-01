@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <android.support.v7.widget.RecyclerView
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+    <android.support.v7.widget.RecyclerVniew
         android:id="@+id/recycler_view"
         android:layout_margin="20dp"
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </android.support.v7.widget.RecyclerView>
-
+    </android.support.v7.widget.RecyclerVniew>
 
 </LinearLayout>
