@@ -11,13 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MusicActiivity"
+            android:name="com.dongyiying.work_4.MusicActivity"
             android:label="@string/title_activity_music"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme">
         </activity>
-        <activity android:name=".VideoActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LogActivity">
+        <activity android:name="com.dongyiying.work_4.VideoActivity" />
+        <activity android:name="com.dongyiying.work_4.MainActivity" />
+        <activity android:name="com.dongyiying.work_4.LogActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

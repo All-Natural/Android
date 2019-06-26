@@ -1,12 +1,13 @@
-package com.dongyiying.work_4.app;
+package com.dongyiying.work_4;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 import android.widget.Button;
-import com.dongyiying.work_4.MusicActivity;
-import com.dongyiying.work_4.VideoActivity;
+
+import com.dongyiying.work_4.app.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ActionBar actionBar=getSupportActionBar();
+        if (actionBar!=null){
+            actionBar.hide();
+        }
         Button button_1=findViewById(R.id.bt_jump_1);
         button_1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
@@ -26,6 +27,10 @@ public class LogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log);
+        ActionBar actionBar=getSupportActionBar();
+        if (actionBar!=null){
+            actionBar.hide();
+        }
         defaultdataSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         accountEditText = findViewById(R.id.edit_1);
         passwordEditText = findViewById(R.id.edit_2);
@@ -35,9 +40,7 @@ public class LogActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String account=accountEditText.getText().toString();
-                String password=passwordEditText.getText().toString();
-                Intent intent=new Intent(LogActivity.this, com.dongyiying.work_4.app.MainActivity.class);
+                Intent intent=new Intent(LogActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -52,6 +55,8 @@ public class LogActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent=new Intent(LogActivity.this, MainActivity.class);
+                startActivity(intent);
                 String account = accountEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
                 editor = defaultdataSharedPreferences.edit();
